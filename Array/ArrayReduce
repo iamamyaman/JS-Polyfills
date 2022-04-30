@@ -1,0 +1,16 @@
+Array.prototype.ourReduce = function(callback,initialValue) {
+  let accumulator = initialValue;
+  for(let i =0;i<this.length;i++){
+    output = callback(accumulator,this[i]);
+  }
+  return accumulator;
+//   console.log(accumulator); 
+// Check the output
+}
+
+
+let arr =[1,4,5,10];
+
+arr.ourReduce((acc,item)=>{
+  return acc + item;
+},5)
